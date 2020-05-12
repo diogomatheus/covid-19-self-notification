@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>COVID-19 (coronavírus): Formulário de autonotificação</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Formulário de autonotificação desenvolvido para analisar os sintomas reportado pelo usuário com o objetivo de recomendar ações visando o combate à COVID-19 (coronavírus).">
+        <meta name="keywords" content="COVID-19, coronavírus, formulário de autonotificação, análise, sintomas, recomendação">
+        <meta name="robots" content="all" />
+
+        <link rel="shortcut icon" href="image/favicon.png" type="image/ico"/>
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="image/apple-touch-icon-iphone.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="image/apple-touch-icon-ipad.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="image/apple-touch-icon-iphone-retina.png"/>
+
+        <!--Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Materialize-->
+        <link type="text/css" rel="stylesheet" href="plugins/materialize/css/materialize.min.css" media="screen,projection"/>
+        <!--Application style-->
+        <link type="text/css" rel="stylesheet" href="application.css" rel="stylesheet" />
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <main>
+            <div class="container">
+                <br />
+                <div class="row">
+                    <div class="col s12">
+                        <div class="center">
+                            <h4>COVID-19 (coronavírus): Formulário de autonotificação</h4>
+                        </div>
+                        <div id="application-note">
+                            <p>Esse serviço não substitui uma avaliação realizada por um profissional de saúde.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <div id="main-content">
+                            <div id="error-container" class="card-panel z-depth-3">
+                                <h5>Por favor, preencha os dados corretamente:</h5>
+                                <ul></ul>
+                            </div>
+                            <form method="post" accept-charset="utf-8" name="covid-19-form" id="covid-19-form">
+                                <div class="section">
+                                    <h5 class="valign-wrapper"><i class="material-icons">person</i> Identificação</h5>
+                                    <div class="row">
+                                        <div class="col l6 s12">
+                                            <div class="row">
+                                                <div class="input-field col s12">
+                                                    <input placeholder="Ex: João da Silva" name="nome" id="nome_input" type="text">
+                                                    <label for="nome_input">Nome</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col l6 s12">
+                                            <div class="row">
+                                                <div class="input-field col s12">
+                                                    <input placeholder="Ex: 31/01/2000" name="data_nascimento" id="data_nascimento_input" autocomplete="off" type="text">
+                                                    <label for="data_nascimento_input">Data de nascimento</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="section">
+                                    <h5 class="valign-wrapper"><i class="material-icons">assignment</i> Dados clínicos</h5>
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <span for="sintomas[]">Selecione os sintomas apresentados:</span>
+                                            <div class="row">
+                                                <div class="col l6 s12">
+                                                    <p>
+                                                        <label>
+                                                            <input name="sintomas[]" value="Febre" type="checkbox" class="filled-in" />
+                                                            <span>Febre</span>
+                                                        </label>
+                                                    </p>
+                                                    <p>
+                                                        <label>
+                                                            <input name="sintomas[]" value="Tosse" type="checkbox" class="filled-in" />
+                                                            <span>Tosse</span>
+                                                        </label>
+                                                    </p>
+                                                    <p>
+                                                        <label>
+                                                            <input name="sintomas[]" value="Dor de garganta" type="checkbox" class="filled-in" />
+                                                            <span>Dor de garganta</span>
+                                                        </label>
+                                                    </p>
+                                                    <p>
+                                                        <label>
+                                                            <input name="sintomas[]" value="Dificuldade de respirar" type="checkbox" class="filled-in" />
+                                                            <span>Dificuldade de respirar</span>
+                                                        </label>
+                                                    </p>
+                                                    <p>
+                                                        <label>
+                                                            <input name="sintomas[]" value="Dor no corpo" type="checkbox" class="filled-in" />
+                                                            <span>Dor no corpo</span>
+                                                        </label>
+                                                    </p>
+                                                    <p>
+                                                        <label>
+                                                            <input name="sintomas[]" value="Diarreia" type="checkbox" class="filled-in" />
+                                                            <span>Diarreia</span>
+                                                        </label>
+                                                    </p>
+                                                    <p>
+                                                        <label>
+                                                            <input name="sintomas[]" value="Náusea/vômitos" type="checkbox" class="filled-in" />
+                                                            <span>Náusea/vômitos</span>
+                                                        </label>
+                                                    </p>
+                                                    <p>
+                                                        <label>
+                                                            <input name="sintomas[]" value="Cefaleia (dor de cabeça)" type="checkbox" class="filled-in" />
+                                                            <span>Dor de cabeça (cefaleia)</span>
+                                                        </label>
+                                                    </p>
+                                                    <p>
+                                                        <label>
+                                                            <input name="sintomas[]" value="Nariz escorrendo" type="checkbox" class="filled-in" />
+                                                            <span>Nariz escorrendo</span>
+                                                        </label>
+                                                    </p>
+                                                    <p>
+                                                        <label>
+                                                            <input name="sintomas[]" value="Irritabilidade/confusão" type="checkbox" class="filled-in" />
+                                                            <span>Irritabilidade/confusão</span>
+                                                        </label>
+                                                    </p>
+                                                    <p>
+                                                        <label>
+                                                            <input name="sintomas[]" value="Desmaio ou perda temporária de consciência" type="checkbox" class="filled-in" />
+                                                            <span>Desmaio ou perda temporária de consciência</span>
+                                                        </label>
+                                                    </p>
+                                                    <p>
+                                                        <label>
+                                                            <input name="sintomas[]" value="Sonolência excessiva" type="checkbox" class="filled-in" />
+                                                            <span>Sonolência excessiva</span>
+                                                        </label>
+                                                    </p>
+                                                    <p>
+                                                        <label>
+                                                            <input name="sintomas[]" value="Falta de apetite" type="checkbox" class="filled-in" />
+                                                            <span>Falta de apetite</span>
+                                                        </label>
+                                                    </p>
+                                                    <p>
+                                                        <label>
+                                                            <input name="sintomas[]" value="Pressão persistente no tórax" type="checkbox" class="filled-in" />
+                                                            <span>Pressão persistente no tórax</span>
+                                                        </label>
+                                                    </p>
+                                                </div>
+                                                <div class="col l6 s12">
+                                                    <p>
+                                                        <label>
+                                                            <input name="sintomas[]" value="Adinamia (fraqueza)" type="checkbox" class="filled-in" />
+                                                            <span>Fraqueza (adinamia)</span>
+                                                        </label>
+                                                    </p>
+                                                    <p>
+                                                        <label>
+                                                            <input name="sintomas[]" value="Produção de escarro" type="checkbox" class="filled-in" />
+                                                            <span>Produção de escarro</span>
+                                                        </label>
+                                                    </p>
+                                                    <p>
+                                                        <label>
+                                                            <input name="sintomas[]" value="Calafrios" type="checkbox" class="filled-in" />
+                                                            <span>Calafrios</span>
+                                                        </label>
+                                                    </p>
+                                                    <p>
+                                                        <label>
+                                                            <input name="sintomas[]" value="Nariz entupido" type="checkbox" class="filled-in" />
+                                                            <span>Nariz entupido</span>
+                                                        </label>
+                                                    </p>
+                                                    <p>
+                                                        <label>
+                                                            <input name="sintomas[]" value="Olhos remelentos" type="checkbox" class="filled-in" />
+                                                            <span>Olhos remelentos</span>
+                                                        </label>
+                                                    </p>
+                                                    <p>
+                                                        <label>
+                                                            <input name="sintomas[]" value="Dificuldade para deglutir" type="checkbox" class="filled-in" />
+                                                            <span>Dificuldade para deglutir</span>
+                                                        </label>
+                                                    </p>
+                                                    <p>
+                                                        <label>
+                                                            <input name="sintomas[]" value="Manchas vermelhas pelo corpo" type="checkbox" class="filled-in" />
+                                                            <span>Manchas vermelhas pelo corpo</span>
+                                                        </label>
+                                                    </p>
+                                                    <p>
+                                                        <label>
+                                                            <input name="sintomas[]" value="Gânglios linfáticos aumentados" type="checkbox" class="filled-in" />
+                                                            <span>Gânglios linfáticos aumentados</span>
+                                                        </label>
+                                                    </p>
+                                                    <p>
+                                                        <label>
+                                                            <input name="sintomas[]" value="Cansaço respiratório" type="checkbox" class="filled-in" />
+                                                            <span>Cansaço respiratório</span>
+                                                        </label>
+                                                    </p>
+                                                    <p>
+                                                        <label>
+                                                            <input name="sintomas[]" value="Coloração azulada/acinzentada da pele ou unhas" type="checkbox" class="filled-in" />
+                                                            <span>Coloração azulada/acinzentada da pele ou unhas</span>
+                                                        </label>
+                                                    </p>
+                                                    <p>
+                                                        <label>
+                                                            <input name="sintomas[]" value="Desidratação" type="checkbox" class="filled-in" />
+                                                            <span>Desidratação</span>
+                                                        </label>
+                                                    </p>
+                                                    <p>
+                                                        <label>
+                                                            <input name="sintomas[]" value="Coloração azulada dos lábios ou rosto" type="checkbox" class="filled-in" />
+                                                            <span>Coloração azulada dos lábios ou rosto</span>
+                                                        </label>
+                                                    </p>
+                                                    <p>
+                                                        <label>
+                                                            <input name="sintomas[]" value="Saturação de O2 menor que 95% em ar ambiente" type="checkbox" class="filled-in" />
+                                                            <span>Saturação de O2 menor que 95% em ar ambiente</span>
+                                                        </label>
+                                                    </p>
+                                                    <p>
+                                                        <label>
+                                                            <input name="sintomas[]" value="Outros" type="checkbox" class="filled-in" />
+                                                            <span>Outros</span>
+                                                        </label>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                                <div>
+                                    <div class="row">
+                                        <div class="col m6 s12 center-align">
+                                            <button id="covid-19-form-reset" class="waves-effect waves-light btn-large" type="button">Limpar os dados</button>
+                                            <div class="show-on-small">
+                                                <br />
+                                            </div>
+                                        </div>
+                                        <div class="col m6 s12 center-align">
+                                            <button class="waves-effect waves-light btn-large" type="submit" name="action">
+                                                Enviar os dados
+                                                <i class="material-icons right">send</i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="page-footer light-blue darken-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col s6">
+                        <h5 class="white-text">COVID-19 (coronavírus): Formulário de autonotificação</h5>
+                        <p class="grey-text text-lighten-4">Formulário desenvolvido para analisar os sintomas reportado pelo usuário com o objetivo de recomendar ações visando o combate à COVID-19 (coronavírus).</p>
+                    </div>
+                    <div class="col offset-s2 s4">
+                        <h5 class="white-text">Links úteis</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="https://coronavirus.saude.gov.br/">O que é COVID-19 (coronavírus)?</a></li>
+                            <li><a class="grey-text text-lighten-3" href="https://www.who.int/health-topics/coronavirus">OMS COVID-19 (coronavírus)</a></li>
+                            <li><a class="grey-text text-lighten-3" href="https://www.bing.com/covid">Bing COVID-19 Tracker</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container center-align">
+                    © 2020, enfrentamento à COVID-19 (coronavírus).
+                </div>
+            </div>
+        </footer>
+
+        <!--jQuery 3.1.1 -->
+        <script type="text/javascript" src="plugins/jquery/jquery-3.1.1.js"></script>
+
+        <!--Materialize-->
+        <script type="text/javascript" src="plugins/materialize/js/materialize.min.js"></script>
+
+        <!--jQuery Validation Plugin-->
+        <script type="text/javascript" src="plugins/jquery-validation/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="plugins/jquery-validation/additional-methods.min.js"></script>
+
+        <!--Cleave.js-->
+        <script type="text/javascript" src="plugins/cleave/cleave.min.js"></script>
+
+        <!--Application script-->
+        <script type="text/javascript" src="application.js"></script>
+    </body>
+</html>

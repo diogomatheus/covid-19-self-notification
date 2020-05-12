@@ -1,0 +1,32 @@
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+div#application-note {
+	text-align: center;
+	font-size: 12px;
+}
+
+.input-field>label:not(.label-icon), [type="checkbox"]+span {
+	color: rgba(0,0,0,0.87);
+}
+
+div#error-container {
+	color: red;
+	display: none
+}
+
+div#error-container ul li {
+	list-style-type: disc;
+	margin-left: 20px;
+}
+
+span.invalid {
+	color: #F44336;
+}
